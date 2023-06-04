@@ -1,21 +1,22 @@
-#To test do:
-#To view the available DNS commands in powershell:
+## To restore or backup use the following commands
+
+# To view the available DNS commands in powershell:
 ```
 Get-Command -Module DnsServer
 ```
 
-#View DNS zone available on remote PC with Powershell:
+# View DNS zone available on remote PC with Powershell:
 ```
 Get-DnsServerZone -computername ltest001.remotesyslog.com
 ```
 
-#View A records from a zone (Change record type to view other records, like MX):
+# View A records from a zone (Change record type to view other records, like MX):
 ```
 Get-DnsServerResourceRecord -computername ltest001.remotesyslog.com -RRType A  remotesyslog.com
 ```
 
 #To backup or restore do the following steps:
-#Create a local/share/symlink directory for backup(server what runs the DNS service):
+# Create a local/share/symlink directory for backup(server what runs the DNS service):
 ```
 cd /
 mkdir temp
